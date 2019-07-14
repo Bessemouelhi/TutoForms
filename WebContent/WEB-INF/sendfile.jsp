@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<%@ include file="connected.jsp" %>
+
 <c:if test="${ !empty fichier }"><p><c:out value="Le fichier ${ fichier } (${ description }) a été uploadé !" /></p></c:if>
     <form method="post" action="sendfile" enctype="multipart/form-data">
         <p>

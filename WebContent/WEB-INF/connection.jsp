@@ -8,9 +8,7 @@
 </head>
 <body>
 
-<c:if test="${ !empty sessionScope.login }">
-<p><c:out value="${ sessionScope.login }" /></p>
-</c:if>
+<%@ include file="connected.jsp" %>
 
 <h2>
 <c:if test="${ !empty form.resultat }">

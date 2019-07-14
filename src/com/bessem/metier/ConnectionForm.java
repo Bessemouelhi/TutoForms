@@ -14,7 +14,7 @@ public class ConnectionForm {
 		
 		if (login.equals("toto") && pass.equals("1234")) {
 			isConnected = true;
-			return resultat = "Bravo ! Vous etes connecté !";
+			return resultat = "Bravo ! Vous êtes connecté !";
 		}
 		else {
 			return resultat = "Désolé ! Vous n'etes pas connecté !";

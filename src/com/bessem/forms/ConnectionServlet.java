@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.bessem.metier.ConnectionForm;
 
@@ -33,6 +34,11 @@ public class ConnectionServlet extends HttpServlet {
 		
 		request.setAttribute("resultat", resultat);
 		request.setAttribute("form", form);
+		
+		HttpSession session = request.getSession();
+		if (form.isConnected()) {
+			session.setAttribute("login", form.getLogin());
+		}
 		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/connection.jsp").forward(request, response);
 	}

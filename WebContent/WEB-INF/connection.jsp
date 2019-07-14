@@ -8,6 +8,10 @@
 </head>
 <body>
 
+<c:if test="${ !empty sessionScope.login }">
+<p><c:out value="${ sessionScope.login }" /></p>
+</c:if>
+
 <h2>
 <c:if test="${ !empty form.resultat }">
 <c:out value="${ form.resultat }" />

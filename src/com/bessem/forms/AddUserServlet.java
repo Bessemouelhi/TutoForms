@@ -16,7 +16,7 @@ import com.bessem.dao.UserDao;
 public class AddUserServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-	//private UserDao userDao;
+	private UserDao userDao;
        
     
     public AddUserServlet() {
